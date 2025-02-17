@@ -7,7 +7,7 @@ export interface ShopINT {
     price: number
 }
 
-export const ApiShop: Shop[] = [
+export const ApiShop: ShopINT[] = [
     {id: 1 , image: "./images/image-shop/bibimbap.png" , name: "bibimbap" , price: 80},
     {id: 2 , image: "./images/image-shop/burgers.png" , name: "burgers" , price: 100},
     {id: 3 , image: "./images/image-shop/burrito.png" , name: "burrito" , price: 128},
