@@ -3,26 +3,14 @@
 import { useSelector } from "react-redux";
 import { RoorState } from "../store/store";
 
-import { useEffect } from "react";
-import AOS from "aos"
-import "aos/dist/aos.css"
-
-
 function Pay (){
 
     const totalPrice = useSelector((state: RoorState)=> state.cart.totalPrice);
 
-    
-    useEffect (()=> {
-        AOS.init({
-            duraction : 1000,
-            once: true,
-        })
-    }, [])
 
     return(
         <div>
-            <div data-aos="flip-down" className="box-pay">
+            <div className="box-pay">
                 <h2 className="title-pay">Card Details</h2>
                 <p className="text-pay">name on card :</p>
                 <input placeholder="Name" type="text" className="input-pay" />
