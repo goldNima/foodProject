@@ -2,19 +2,8 @@
 
 import apiList2Foods from "../api/api-list2-foods"
 
-import { useEffect } from "react";
-import AOS from "aos"
-import "aos/dist/aos.css"
 
 function GetApliList2 (){
-
-    useEffect (()=> {
-        AOS.init({
-            duraction : 1000,
-            once: true,
-        })
-    }, [])
-
     return(
         <div>
             <header className="header-list2">
@@ -23,7 +12,7 @@ function GetApliList2 (){
             </header>
             <div className="main-list2">
                 {apiList2Foods.map((item)=>(
-                    <div  data-aos="fade-up" className="list2" key={item.id}>
+                    <div className="list2" key={item.id}>
                         <img src={item.img} alt="" className="image-list2" />
                         <h3 className="text-list2">{item.text}</h3>
                         <div className="footer-list2">
