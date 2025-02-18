@@ -1,19 +1,9 @@
 "use client"
 
 import { apiList1Foods } from "../api/api-list1-foods"
-import { useEffect } from "react";
-import AOS from "aos"
-import "aos/dist/aos.css"
-
 
 function GetApiList1 (){
 
-    useEffect (()=> {
-        AOS.init({
-            duraction : 1000,
-            once: true,
-        })
-    }, [])
 
     return(
         <div>
@@ -23,7 +13,7 @@ function GetApiList1 (){
             </div>
             <div  className="container-get-api-list1">
                     {apiList1Foods.map((item)=>(
-                        <div data-aos="fade-up" className="list1" key={item.id}>
+                        <div className="list1" key={item.id}>
                             <img src={item.img} alt="" className="image-list1" />
                             <h3 className="text-list1">{item.text}</h3>
                             <div className="footer-list1">
