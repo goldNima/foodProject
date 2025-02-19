@@ -1,13 +1,21 @@
 "use client"
 
 import Link from "next/link"
+import { useEffect , useState } from "react"
 
 function dashboard (){
 
-    const name = localStorage.getItem("name")
-    const lastName = localStorage.getItem("Lastname")
-    const email = localStorage.getItem("email")
-    const password = localStorage.getItem("password")
+    const [name , setName] = useState<string | null>(null);
+    const [lastName , setLastName] = useState<string | null>(null);
+    const [email , setEmail] = useState<string | null>(null);
+    const [password , setPassword] = useState<string | null>(null);
+
+     useEffect(()=>{
+        setName(localStorage.getItem("name"));
+        setLastName(localStorage.getItem("Lastname"));
+        setEmail(localStorage.getItem("email"));
+        setPassword(localStorage.getItem("password"))
+     })
 
     return(
         <div>
